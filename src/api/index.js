@@ -8,7 +8,7 @@ export const fetchdata = async () =>{
 
     return {confirmed ,recovered , deaths ,lastUpdate};
   }
-    catch(error){
+  catch(error){
 
   }
 }
