@@ -6,6 +6,7 @@ export default class App extends Component {
     
 state ={
     data:{},
+    country:'',
 }
 
 async componentDidMount(){
@@ -14,7 +15,9 @@ async componentDidMount(){
 }
 
 handleCountryChange = async (country) =>{
- console.log(country);
+    const fetchedData = await fetchdata(country);
+    console.log(fetchedData);
+    this.setState({data:fetchedData, country:country});
 }
 
 render() {
